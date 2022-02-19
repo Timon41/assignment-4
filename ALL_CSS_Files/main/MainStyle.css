@@ -1,0 +1,233 @@
+.head{
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  background:#FBF8F1;
+}
+
+.logo{
+	color: #3E497A;
+	text-transform: uppercase;
+	font-size: 2.0em;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.logo:hover{
+  color:#3E497A;
+}
+
+header .navigation{
+  position: relative;
+}
+
+.in-navigation a{
+  position: relative;
+  color: #3E497A;
+  font-size: 1.23em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 30px;
+   transition: 0.2s ease;
+}
+
+.in-navigation a:hover{
+	color:#B8405E;
+	border-bottom:3px solid #B8405E;
+}
+
+section{
+	padding: 100px 200px;
+}
+
+.main{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.in-main{
+z-index: 900;
+color:#000B49;
+margin-top: 50px;
+}
+
+.txt{
+text-transform: uppercase;
+font-size: 2.5em;
+letter-spacing: 3px;
+font-weight: 800;
+line-height: 55px;
+margin-bottom: 50px;
+}
+
+.in-main p{
+	margin-bottom: 50px;
+	font-size: 1.4em;
+	font-weight: 600;
+	color:#F6F6F6;
+	z-index: 1000;
+	padding-right: 500px;
+}
+
+.in-main a{
+	background: #3E497A;
+	text-decoration: none;
+	padding: 10px 25px;
+	color:#F0F0F0;
+	font-weight: 600;
+	font-size: 1.5em;
+	border-radius: 2px;
+	transition: 0.3s ease;
+}
+
+.in-main a:hover{
+	color: #313552;
+}
+
+.icons{
+	z-index: 900;
+	display: flex;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 15px;
+	font-size: 1.5em;
+}
+
+.icons a{
+	color:#19282F;
+}
+
+.slider{
+	position: relative;
+	display: flex;
+	z-index: 900;
+	justify-content: center;
+	align-items: center;
+	transform:translateY(80px);
+	margin-top: 30px;
+}
+
+.slide-btn{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background:#19282F;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+	transition: 0.3s ease;
+	display: inline-block;
+	margin: 20px;
+}
+
+.slide-btn:hover{
+	transform: scale(1.2);
+}
+
+.slide-btn.active{
+	background: white;
+}
+
+
+@media (max-width: 1000px){
+header{
+	padding: 12px 20px;
+}
+
+section{
+	padding: 100px 100px;
+}
+
+.main{
+	right: 15px;
+}
+
+.icons{
+	right: 15px;
+}
+header .navigation{
+display: none;
+}
+
+header .navigation.active{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(1, 1, 0, 0.3);
+}
+
+.head-btn{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rR-jlBWRw0MIFInxMUFkRYNHv2DZaX4fWA&usqp=CAU);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.1s ease;
+}
+
+.head-btn.active{
+	z-index: 1000;
+	background: url(http://www.clker.com/cliparts/Q/3/G/C/7/W/close-md.png);
+	background-size: 30px;
+	background-position: center;
+	transition: 0.1s ease;
+
+}
+
+.in-navigation a{
+color: black;
+font-weight: 500;
+font-size: 1.3em;
+margin: 20px;
+}
+
+.navigation.active .in-navigation{
+	background: white;
+	width: 600px;
+	max-width: 600px;
+	margin: 20px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+}
+
+img{
+z-index: 000;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.sli{
+	position: absolute;
+	width: 100%;
+	clip-path: circle(0% at 0 50%);
+}
+
+.sli.active{
+	clip-path: circle(150% at 0 50%);
+	transition: 2s ease;
+}

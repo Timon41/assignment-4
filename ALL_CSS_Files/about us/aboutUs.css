@@ -1,0 +1,229 @@
+.body-main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+ 
+ /* Main style */
+
+.about-section{
+    background: url(https://cdna.artstation.com/p/assets/images/images/010/998/446/large/3d-factory-3d-factory-monaco-antalis-sport-shop-1.jpg?1527333164) no-repeat left;
+    background-size: 55%;
+    background-color: #3E497A;
+    overflow: hidden;
+    height: 100%;
+    padding: 100px 0;
+}
+ 
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #F1D00A;
+    padding: 150px;
+box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+ 
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 800;
+}
+ 
+.text{
+    font-size: 1.2em;
+    color: #0F0E0E;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+p{
+    font-weight: 600;
+}
+
+h1{
+  color: #0F0E0E;
+}
+ 
+.skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+ 
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+ 
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+ 
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+span{
+  cursor: pointer;
+  font-size: 16px;
+text-align: center;
+padding: 10px;
+  width: 500px;
+  color:#750550;
+  font-weight: 700;
+}
+span:hover{
+background-image: linear-gradient(to right top, #f85370, #f35470, #ee5570, #e8556f, #e3566f);
+color: #541212;
+border-radius: 20px;
+transition: 0.5s;
+ 
+}
+.active{
+  background-image: linear-gradient(to right top, #f85370, #f35470, #ee5570, #e8556f, #e3566f);
+  color: #fff;
+  border-radius: 20px;
+ 
+ 
+}
+
+/* Head style */
+
+.head{
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  background:#FBF8F1;
+}
+
+.logo{
+    color: #3E497A;
+    text-transform: uppercase;
+    font-size: 2.0em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo:hover{
+  color:#3E497A;
+}
+
+header .navigation{
+  position: relative;
+}
+
+.in-navigation a{
+  position: relative;
+  color: #3E497A;
+  font-size: 1.23em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 30px;
+   transition: 0.2s ease;
+}
+
+.in-navigation a:hover{
+    color:#B8405E;
+    border-bottom:3px solid #B8405E;
+}
+
+/* Mobile optimize */
+
+@media (max-width: 1000px){
+header{
+ padding: 12px 20px;
+}
+
+section{
+ padding: 100px 100px;
+}
+
+.main{
+ right: 15px;
+}
+
+.icons{
+ right: 15px;
+}
+header .navigation{
+display: none;
+}
+
+header .navigation.active{
+ position: fixed;
+ width: 100%;
+ height: 100vh;
+ top: 0;
+ left: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: rgba(1, 1, 0, 0.3);
+}
+
+.head-btn{
+ background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rR-jlBWRw0MIFInxMUFkRYNHv2DZaX4fWA&usqp=CAU);
+ background-size: 30px;
+ background-repeat: no-repeat;
+ background-position: center;
+ width: 30px;
+ height: 30px;
+ border-radius: 10px;
+ cursor: pointer;
+ transition: 0.1s ease;
+}
+
+.head-btn.active{
+ z-index: 1000;
+ background: url(http://www.clker.com/cliparts/Q/3/G/C/7/W/close-md.png);
+ background-size: 30px;
+ background-position: center;
+ transition: 0.1s ease;
+
+}
+
+.in-navigation a{
+color: black;
+font-weight: 500;
+font-size: 1.3em;
+margin: 20px;
+}
+
+.navigation.active .in-navigation{
+ background: white;
+ width: 600px;
+ max-width: 600px;
+ margin: 20px;
+ padding: 40px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ border-radius: 5px;
+ box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+}

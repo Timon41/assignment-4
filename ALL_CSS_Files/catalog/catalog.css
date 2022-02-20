@@ -1,0 +1,185 @@
+
+	* {
+   box-sizing: border-box;
+}
+body{
+    background-color: #3E497A;
+   }
+
+.head{
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  background:#FBF8F1;
+}
+
+.logo{
+   color: #3E497A;
+   text-transform: uppercase;
+   font-size: 2.0em;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.logo:hover{
+  color: #3E497A;
+}
+
+
+header .navigation{
+  position: relative;
+}
+
+.in-navigation a{
+  position: relative;
+  color: #3E497A;
+  font-size: 1.23em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 30px;
+   transition: 0.2s ease;
+}
+
+.in-navigation a:hover{
+   color:#B8405E;
+   border-bottom:3px solid #B8405E;
+}
+
+/* Optimization for mobile and tablet devices */
+
+@media (max-width: 1000px){
+header{
+   padding: 12px 20px;
+}
+
+section{
+   padding: 100px 100px;
+}
+
+.main{
+   right: 15px;
+}
+
+
+header .navigation{
+display: none;
+}
+
+header .navigation.active{
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(1, 1, 0, 0.3);
+}
+
+.head-btn{
+   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1rR-jlBWRw0MIFInxMUFkRYNHv2DZaX4fWA&usqp=CAU);
+   background-size: 30px;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.1s ease;
+}
+
+.head-btn.active{
+   z-index: 1000;
+   background: url(http://www.clker.com/cliparts/Q/3/G/C/7/W/close-md.png);
+   background-size: 30px;
+   background-position: center;
+   transition: 0.1s ease;
+
+}
+
+.in-navigation a{
+color: black;
+font-weight: 500;
+font-size: 1.3em;
+margin: 20px;
+}
+
+.navigation.active .in-navigation{
+   background: white;
+   width: 600px;
+   max-width: 600px;
+   margin: 20px;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 5px;
+   box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+}
+
+/* Main part of page */
+
+.body-main{
+   padding-top: 100px;
+}
+
+.product-list {
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+.product-item {
+   width: 300px;
+   padding: 15px 0;
+   text-align: center;
+   margin: 20px auto;
+   border-bottom: 2px solid #F5F5F5;
+   background: #3E497A;
+   transition: 0.3s ease;
+   background: #fafafa;
+}
+.product-item:hover {
+   border: 5px solid #fc5a5a;
+}
+.product-item img {
+   display: block;
+   height: 150px;
+   width: auto;
+   margin: 20px auto;
+}
+.product-item h3 {
+   font-size: 18px;
+   font-weight: 400;
+   color: #444444;
+   margin: 0 0 10px 0;
+}
+.price {
+   font-size: 16px;
+   color: #fc5a5a;
+   display: block;
+   margin-bottom: 12px;
+}
+.button {
+   text-decoration: none;
+   display: inline-block;
+   padding: 0 12px;
+   background: #cccccc;
+   color: white;
+   text-transform: uppercase;
+   font-size: 20px;
+   line-height: 28px;
+   transition: 0.3s ease;
+}
+.product-item:hover .button {
+   background: #fc5a5a;
+   color: white;
+
+}
